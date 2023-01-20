@@ -33,7 +33,7 @@ public class UserService {
         existingUser.setEmailAddress(user.getEmailAddress());
         existingUser.setPhoneNumber(user.getPhoneNumber());
         existingUser.setPassword(user.getPassword());
-        existingUser.setRetailer(user.isRetailer());
+        existingUser.setRetailer(user.getIsRetailer());
         return userRepository.save(existingUser);
     }
 
