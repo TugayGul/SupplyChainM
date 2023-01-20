@@ -1,6 +1,6 @@
 package com.itg.supplychainmanagment.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user")
@@ -77,7 +77,7 @@ public class User {
         this.password = password;
     }
 
-    public boolean isRetailer() {
+    public boolean getIsRetailer() {
         return isRetailer;
     }
 

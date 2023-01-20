@@ -1,6 +1,6 @@
 package com.itg.supplychainmanagment.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "product")
