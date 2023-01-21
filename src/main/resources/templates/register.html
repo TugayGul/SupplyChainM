@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<div class="container" th:fragment="content">
+  <h1 class="text-center">Register</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+      <label for="emailAddress">Email Address</label>
+      <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="isRetailer">Are you a retailer?</label>
+      <input type="checkbox" class="form-control" id="isRetailer">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
+
+And in the Index.html, you should add the link to the register page in the navbar:
+<li class="nav-item">
+  <a class="nav-link" th:href="@{/register}">Kayıt Ol</a>
+</li>
