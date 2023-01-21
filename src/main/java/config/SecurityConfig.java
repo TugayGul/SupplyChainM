@@ -34,11 +34,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
+                .cors().disable()  // TODO: remove after development
                 .authorizeHttpRequests()
-                .requestMatchers("/api/**").authenticated()
-                .anyRequest().permitAll()
+                .requestMatchers("/login").permitAll()
+                .requestMatchers("/register").permitAll()
+                .requestMatchers("/user").hasAuthority("ROLE_RETAILER")
+                .requestMatchers("/user").hasAuthority("ROLE_SUPPLIER")
+                .anyRequest().authenticated()
                 .and()
-                .httpBasic();
+                .httpBasic()
+                .and().build();
 
         return http.build();
     }
