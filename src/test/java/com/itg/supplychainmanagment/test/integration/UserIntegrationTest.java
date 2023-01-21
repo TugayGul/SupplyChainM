@@ -1,4 +1,4 @@
-package com.itg.supplychainmanagment.test;
+package com.itg.supplychainmanagment.test.integration;
 
 
 import com.itg.supplychainmanagment.entity.User;
@@ -24,8 +24,8 @@ public class UserIntegrationTest {
     @Test
     public void testCreateUser(){
         User user = new User();
-        user.setName("John");
-        user.setEmailAddress("john@example.com");
+        user.setName("Bla");
+        user.setEmailAddress("bla@example.com");
         user.setPassword("password");
         user.setPhoneNumber("1234567890");
         user = userService.createUser(user);
