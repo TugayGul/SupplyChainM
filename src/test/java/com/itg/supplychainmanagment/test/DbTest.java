@@ -1,4 +1,4 @@
-package com.itg.supplychainmanagment;
+package com.itg.supplychainmanagment.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
