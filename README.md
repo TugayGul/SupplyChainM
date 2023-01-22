@@ -2,7 +2,7 @@
 
 ## Summary
 
-  JavaServer page(jsp) web application with proper database and rest api.
+  JavaServer page(jsp) web application with connected database, proper driver and rest api.
 
 ### Motivation and Process
   I never used Spring Boot or jakarta or java to write a web app before I start. My previous knowledge was limited to general backend structures comes from Django and DRF. However, I saw this task/challenge as a learning oppurtunity. That's why I tried to do it.
