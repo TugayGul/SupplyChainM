@@ -39,7 +39,7 @@
 - Following the methodology that one goal from each different type of task, I tried to wrote user integration test and unit test. Both seems are fine but I am not sure how to include user repository to the test. Probably might require writing queries or using methods of hibernate.
 
 ## TODOs/Further Plans
-- I left a lot of TODO comments if I continue this in later time. Also some methods I implemented are redundant but I didn't remova them even I see that. The reason explained at above.
+- I left a lot of TODO comments if I continue this in later time. Also, some methods I implemented are redundant but I didn't remova them to see whole development process and my mistakes at the end.
 
-- I planned to dockerizing it at the end and using a jenkins or nginx or even maybe a cloud service from aws but these are also postponed.
+- I planned to dockerizing it and using a jenkins or nginx or even maybe a cloud service from aws but these are also postponed.
 
