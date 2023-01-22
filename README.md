@@ -13,6 +13,7 @@
 
 [previous attempt](https://github.com/sondertg/SupplyChainManagement)
 
+
 ### Project Summary
 
   Develop a supply-chain management system.
@@ -20,7 +21,7 @@
 ### Requirements and Results
 
 ![firefox_IKMqVgnrtw](https://user-images.githubusercontent.com/51514616/213921843-f0e4c4f2-b77d-4890-8b7a-4f25ecaf0ef8.png)
-![firefox_kftaqDHlPy](https://user-images.githubusercontent.com/51514616/213921858-ef0b49bb-a20b-4ea2-b9db-de04c785e8b2.png)
+![firefox_SpsC8EJOii](https://user-images.githubusercontent.com/51514616/213924957-9667a910-0d8e-499a-8287-77b3262a5123.png)
 
 
 - Created the model properly and connected to DB, db test written.
