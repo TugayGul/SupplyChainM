@@ -5,6 +5,7 @@ import com.itg.supplychainmanagment.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -37,8 +38,11 @@ public class ProductController {
 
 
     @GetMapping("/lastFiveProducts")
-    public List<Product> getFiveProducts() {
-        return productService.getFiveProducts();
+    public ModelAndView getFiveProducts() {
+        List<Product> products = productService.getFiveProducts();
+        ModelAndView mav = new ModelAndView("home");
+        mav.addObject("products", products);
+        return mav;
     }
 
 

@@ -42,12 +42,16 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public String login(@RequestParam String email, @RequestParam String password) {
-        User user = userRepository.findByEmailAddressAndPassword(email, password);
+    public String login(@RequestParam String emailAddress, @RequestParam String password) {
+        User user = userRepository.findByEmailAddressAndPassword(emailAddress, password);
         if (user == null || !user.getPassword().equals(password)) {
             throw new IllegalArgumentException("Invalid email or password");
         }
-
-        return "redirect:/home";
+        if (user.getIsRetailer()){
+            return "Hoşgeldiniz retailer"; // TODO: change this to redirect retailer page
+        }
+        else{
+        return "hoşgeldiniz supplier"; // TODO: change this to redirect supplier page
+     }
     }
 }
