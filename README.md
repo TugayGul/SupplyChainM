@@ -36,6 +36,7 @@
 
 - And lastly, I couldn't secure the application. JWT or OAuth 2 is better but since I was trying to learn, I thought I should start with basic auth. My customlogin page is working fine. I can login by using credentials recored in user table. However, I couldn't replace default authentication roles and filterchain with mine. 
 
+- Following the methodology that one goal from each different type of task, I tried to wrote user integration test and unit test. Both seems are fine but I am not sure how to include user repository to the test. Probably might require writing queries or using methods of hibernate.
 
 ## TODOs/Further Plans
 - I left a lot of TODO comments if I continue this in later time. Also some methods I implemented are redundant but I didn't remova them even I see that. The reason explained at above.
