@@ -29,10 +29,16 @@ public class ProductController {
     }
 
 
-    @PreAuthorize("hasAnyRole('ROLE_RETAILER','ROLE_SUPPLIER')")
+
     @GetMapping
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
+    }
+
+
+    @GetMapping("/lastFiveProducts")
+    public List<Product> getFiveProducts() {
+        return productService.getFiveProducts();
     }
 
 

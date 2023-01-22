@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>My Website</title>
@@ -16,7 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link " th:href="@{/login}">Giriş Yap</a>
+        <a class="nav-link " th:href="@{/home}">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " th:href="@{/lastFiveProducts}">Son Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " th:href="@{/customlogin}">Giriş Yap</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" th:href="@{/register}">Kayıt Ol</a>

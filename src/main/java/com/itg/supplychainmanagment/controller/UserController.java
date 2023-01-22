@@ -1,6 +1,7 @@
 package com.itg.supplychainmanagment.controller;
 
 import com.itg.supplychainmanagment.entity.User;
+import com.itg.supplychainmanagment.repository.UserRepository;
 import com.itg.supplychainmanagment.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +12,12 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final UserRepository userRepository;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService,
+                          UserRepository userRepository) {
         this.userService = userService;
+        this.userRepository = userRepository;
     }
 
     @GetMapping
@@ -34,5 +38,16 @@ public class UserController {
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
+    }
+
+
+    @PostMapping("/login")
+    public String login(@RequestParam String email, @RequestParam String password) {
+        User user = userRepository.findByEmailAddressAndPassword(email, password);
+        if (user == null || !user.getPassword().equals(password)) {
+            throw new IllegalArgumentException("Invalid email or password");
+        }
+
+        return "redirect:/home";
     }
 }

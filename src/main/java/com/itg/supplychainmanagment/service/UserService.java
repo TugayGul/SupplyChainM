@@ -11,21 +11,26 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
 
     public User createUser(User user) {
         return userRepository.save(user);
     }
 
+
     public User getUserById(long id) {
         return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User with id " + id + " not found"));
     }
 
+
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
 
     public User updateUser(long id, User user) {
         User existingUser = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User with id " + id + " not found"));
@@ -37,6 +42,7 @@ public class UserService {
         return userRepository.save(existingUser);
     }
 
+
     public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
@@ -45,4 +51,5 @@ public class UserService {
             super(message);
         }
     }
+
 }

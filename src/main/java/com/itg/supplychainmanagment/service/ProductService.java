@@ -25,6 +25,16 @@ public class ProductService {
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+
+    public List<Product> getFiveProducts(){
+        List<Product> allProducts = productRepository.findAll();
+        int totalProducts = allProducts.size();
+        if (totalProducts > 5) {
+            return allProducts.subList(totalProducts - 5, totalProducts);
+        }
+        return allProducts;
+    }
+
     public Product viewProductDetails(long productId) {
         return productRepository.findById(productId).get();
     }
