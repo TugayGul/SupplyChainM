@@ -10,8 +10,8 @@
 <body>
 <header th:include="index :: header"></header>
 <div class="container" th:fragment="content">
-    <h1 class="text-center">Son 5 Ürün</h1>
-    <table class="table table-striped">
+    <h1 class="text-center">Hoşgeldiniz</h1>
+    <table class="table table-striped" id="product-table">
         <thead>
         <tr>
             <th>Ürün Adı</th>
@@ -21,13 +21,26 @@
         </thead>
         <tbody>
         <tr th:each="product : ${products}">
-            <td th:text="${product.name}"></td>
-            <td th:text="${product.price}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productPrice}"></td>
             <td th:text="${product.quantity}"></td>
         </tr>
         </tbody>
     </table>
 </div>
 <footer th:include="index :: footer"></footer>
+<script>
+    $(document).ready(function() {
+        $("#product-table").hide();
+        $("#show-products-link").click(function() {
+            $("#product-table").toggle();
+        });
+    });
+</script>
+
 </body>
 </html>
+
+<li class="nav-item">
+    <a class="nav-link" th:href="@{/home}">Ana Sayfa</a>
+</li>
